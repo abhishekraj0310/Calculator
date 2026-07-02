@@ -1,4 +1,4 @@
-#  Calculator
+#  Calculator :
 
 A sleek, modern, fully responsive web calculator built with **vanilla JavaScript** — no frameworks, no build step, no dependencies. Just clean HTML, CSS, and ES6+.
 
