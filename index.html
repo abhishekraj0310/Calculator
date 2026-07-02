@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A sleek, modern, fully responsive web calculator built with vanilla JavaScript." />
+  <title>Calculator</title>
+
+  <!-- Inter font for a clean, professional look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <!--
+      The calculator is a semantic <section>. All buttons live inside a grid.
+      Each button carries data-* attributes so the JS layer stays decoupled
+      from the markup (no reliance on visible text / innerHTML for logic).
+    -->
+    <section class="calculator" aria-label="Calculator">
+      <!-- Dual-line display -->
+      <div class="display" role="status" aria-live="polite">
+        <div class="display__expression" data-expression aria-hidden="true"></div>
+        <output class="display__result" data-result>0</output>
+      </div>
+
+      <!-- Keypad -->
+      <div class="keys">
+        <!-- Row 1: clear / sign / percent / divide -->
+        <button class="key key--fn" data-action="clear" type="button">AC</button>
+        <button class="key key--fn" data-action="negate" type="button" aria-label="Toggle sign">+/&minus;</button>
+        <button class="key key--fn" data-action="percent" type="button">%</button>
+        <button class="key key--op" data-action="operator" data-operator="&divide;" type="button" aria-label="Divide">&divide;</button>
+
+        <!-- Row 2 -->
+        <button class="key" data-action="digit" data-digit="7" type="button">7</button>
+        <button class="key" data-action="digit" data-digit="8" type="button">8</button>
+        <button class="key" data-action="digit" data-digit="9" type="button">9</button>
+        <button class="key key--op" data-action="operator" data-operator="&times;" type="button" aria-label="Multiply">&times;</button>
+
+        <!-- Row 3 -->
+        <button class="key" data-action="digit" data-digit="4" type="button">4</button>
+        <button class="key" data-action="digit" data-digit="5" type="button">5</button>
+        <button class="key" data-action="digit" data-digit="6" type="button">6</button>
+        <button class="key key--op" data-action="operator" data-operator="&minus;" type="button" aria-label="Subtract">&minus;</button>
+
+        <!-- Row 4 -->
+        <button class="key" data-action="digit" data-digit="1" type="button">1</button>
+        <button class="key" data-action="digit" data-digit="2" type="button">2</button>
+        <button class="key" data-action="digit" data-digit="3" type="button">3</button>
+        <button class="key key--op" data-action="operator" data-operator="+" type="button" aria-label="Add">+</button>
+
+        <!-- Row 5 -->
+        <button class="key key--del" data-action="delete" type="button" aria-label="Delete last digit">&#9003;</button>
+        <button class="key" data-action="digit" data-digit="0" type="button">0</button>
+        <button class="key" data-action="decimal" type="button" aria-label="Decimal point">.</button>
+        <button class="key key--equals" data-action="equals" type="button" aria-label="Equals">=</button>
+      </div>
+    </section>
+
+    <p class="hint">
+      Tip: use your keyboard &mdash; numbers, <kbd>+ &minus; &times; &divide;</kbd>, <kbd>Enter</kbd> to equal,
+      <kbd>Backspace</kbd> to delete, <kbd>Esc</kbd> to clear.
+    </p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
