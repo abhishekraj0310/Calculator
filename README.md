@@ -1,4 +1,4 @@
-#  Calculator
+#  Calculator:
 
 A sleek, modern, fully responsive web calculator built with **vanilla JavaScript** — no frameworks, no build step, no dependencies. Just clean HTML, CSS, and ES6+.
 
@@ -6,7 +6,7 @@ A sleek, modern, fully responsive web calculator built with **vanilla JavaScript
 
 ---
 
-##  Screenshot
+##  Screenshot:
 
 <p align="center">
   <img width="466" height="535" alt="default png" src="https://github.com/user-attachments/assets/eab77048-29d0-4551-8668-b195411a42af" />
@@ -40,7 +40,7 @@ A sleek, modern, fully responsive web calculator built with **vanilla JavaScript
 
 ---
 
-##  Edge cases handled (bug-free by design)
+##  Edge cases handled (bug-free by design):
 
 This calculator explicitly prevents the classic calculator bugs:
 
