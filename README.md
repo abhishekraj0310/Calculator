@@ -1,4 +1,4 @@
-#  Calculator :
+#  Calculator
 
 A sleek, modern, fully responsive web calculator built with **vanilla JavaScript** — no frameworks, no build step, no dependencies. Just clean HTML, CSS, and ES6+.
 
@@ -6,16 +6,10 @@ A sleek, modern, fully responsive web calculator built with **vanilla JavaScript
 
 ---
 
-##  Screenshots
-
-> _Add your screenshots here. Open `index.html` in a browser, take a screenshot, drop the image in a `screenshots/` folder, and update the paths below._
-
-| Default | With expression |
-| :---: | :---: |
-| ![Calculator default state](screenshots/default.png) | ![Calculator mid-calculation](screenshots/expression.png) |
+##  Screenshot
 
 <p align="center">
-  <img src="screenshots/demo.gif" alt="Calculator demo" width="320" />
+  <img src="screenshots/default.png" alt="Calculator screenshot" width="320" />
 </p>
 
 ---
@@ -36,7 +30,7 @@ A sleek, modern, fully responsive web calculator built with **vanilla JavaScript
 -  Clean **Inter** typography
 -  Accessible — `aria-live` display, `aria-label`s, and honours `prefers-reduced-motion`
 
-###  Full keyboard support
+### ⌨️ Full keyboard support
 | Key | Action |
 | --- | --- |
 | `0`–`9` | Enter digits |
@@ -66,16 +60,6 @@ This calculator explicitly prevents the classic calculator bugs:
 ##  Architecture
 
 The codebase is split into two clear concerns:
-
-```
-Calculator      →  Pure state machine. Zero DOM references.
-                   All arithmetic + edge-case logic lives here.
-                   (This is why it's fully unit-testable.)
-
-CalculatorUI    →  Thin controller. Wires click + keyboard events
-                   to the engine and renders state to the display.
-```
-
 This decoupling is the single most important design decision: the maths never touches the DOM, so bugs are easy to isolate and the engine could be reused in any environment (Node, tests, another UI).
 
 ---
@@ -97,15 +81,6 @@ python3 -m http.server 8000
 ---
 
 ##  Project structure
-
-```
-calculator/
-├── index.html    # Semantic HTML5 structure
-├── style.css     # Dark-mode theme via CSS variables
-├── script.js     # Calculator engine + UI controller (ES6+)
-└── README.md
-```
-
 ---
 
 ##  Tech stack
@@ -113,9 +88,3 @@ calculator/
 - **HTML5** — semantic markup, `data-*`-driven buttons
 - **CSS3** — custom properties for theming, CSS grid, `clamp()` for fluid sizing
 - **JavaScript (ES6+)** — classes, private methods, no external dependencies
-
----
-
-##  License
-
-Released under the [MIT License](LICENSE) — free to use, modify, and learn from.
