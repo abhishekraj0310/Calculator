@@ -9,11 +9,8 @@ A sleek, modern, fully responsive web calculator built with **vanilla JavaScript
 ##  Screenshot
 
 <p align="center">
-  <img src="<img width="466" height="535" alt="default png" src="https://github.com/user-attachments/assets/0ea8c01d-4cbe-4fe2-b1ef-82ab4aca7968" />
- />
+  <img src="screenshots/default.png" alt="Calculator screenshot" width="320" />
 </p>
-
----
 
 ##  Features
 
